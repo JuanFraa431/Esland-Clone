@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeroContainer from '../HeroContainer.astro'
+import Button from '../button.tsx';
+import Numeros from '../Numeros.astro'
+import Galeria from '../Galeria.astro'
+import Ediciones from '../Ediciones.astro'
+---
+<Layout title="Archivo" 
+description="Archivo">
+
+
+    <HeroContainer img="/hero.png">
+        <h1 class="text-5xl font-medium mb-20 tracking-wider">EDICIONES ANTERIORES</h1>
+
+        <Button
+            url={"https://www.youtube.com/watch?v=1YmpPrqKP-g"}
+            className="text-blue-950 animate-fade-up bg-white "
+            >
+                REVIVE LA ULTIMA GALA
+        </Button>
+    </HeroContainer>
+    <main>
+        <h1 class="text-4xl font-semibold text-center text-wrap mx-auto mt-20 tracking-wide animate-on-scroll titulo-galeria ">
+            GALERIA
+        </h1>
+        <Ediciones/>
+        <Galeria/>
+        <Numeros/>
+    </main>
+
+
+</Layout>
+
+<style>
+    .titulo-galeria{
+        text-shadow: 
+        0px 0px 10px rgba(136, 165, 255, 0.5);
+}
+</style>

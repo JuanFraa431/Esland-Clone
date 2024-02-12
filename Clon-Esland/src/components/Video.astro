@@ -1,8 +1,22 @@
+---
+import Button from '../components/button.tsx'
+---
+
 <div class="w-full relative" >
 
-    <img class="absolute top-10 z-10 w-[800px] left-0 right-0 m-auto"
-    src="/logo-home.svg" 
-    alt="Esland - Premios a la comunidad hispanohablante de streaming">
+    <div>
+        <img class="absolute top-10 z-10 w-[800px] left-0 right-0 m-auto mb-4 animate-fade-up"
+        src="/logo-home.svg" 
+        alt="Esland - Premios a la comunidad hispanohablante de streaming">
+
+        <Button
+            url={"https://premiosesland.koobin.com"}
+            className="text-blue-950 animate-fade-up bg-white absolute z-10 left-0 right-0 m-auto top-3/4"
+            >
+                COMPRAR ENTRADAS
+        </Button>
+    </div>
+    
 
     <video 
     class="w-full z-40 h-screen object-cover object-top animate-ease-in-out animate-fade animate-duration-1000" 
@@ -18,4 +32,5 @@
     autoplay loop muted 
     ></video>
     
+
 </div>

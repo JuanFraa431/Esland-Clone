@@ -1,0 +1,38 @@
+    <div class="flex justify-center space-x-4">
+        <!-- Botones -->
+        <button id="btnIframe1" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Primera Edición
+        </button>
+        <button id="btnIframe2" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Segunda Edición
+        </button>
+    </div>
+    
+    <!-- Contenedor de iframes -->
+    <div id="iframeContainer" class="mt-8">
+        <div id="iframe1" class="iframe-container">
+        <iframe width="1456" height="553" src="https://www.youtube.com/embed/9VHqKbR9LgM" title="PREMIOS ESLAND EN MÉXICO - TheGrefg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div id="iframe2" class="iframe-container" style="display: none;">
+        <iframe width="1456" height="553" src="https://www.youtube.com/embed/aL8kcA3ZDOs" title="Anuncio Oficial Premios Esland" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        // Función para mostrar el iframe1 y ocultar iframe2
+        function mostrarIframe1() {
+        document.getElementById("iframe1").style.display = "block";
+        document.getElementById("iframe2").style.display = "none";
+        }
+
+        // Función para mostrar el iframe2 y ocultar iframe1
+        function mostrarIframe2() {
+        document.getElementById("iframe1").style.display = "none";
+        document.getElementById("iframe2").style.display = "block";
+        }
+
+        // Asociar eventos de clic a los botones
+        document.getElementById("btnIframe1").addEventListener("click", mostrarIframe1);
+        document.getElementById("btnIframe2").addEventListener("click", mostrarIframe2);
+    </script>

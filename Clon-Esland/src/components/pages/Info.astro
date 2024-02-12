@@ -1,0 +1,121 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeroContainer from '../HeroContainer.astro'
+import InfoKitPrensa from "../InfoKitPrensa.astro"
+---
+<Layout title=`` description=''>
+        <HeroContainer img="/info.png">
+        <h1
+            class="lg:text-6xl text-5xl text-center uppercase font-tomaso tracking tracking-widest"
+        >
+            LOS PREMIOS ESLAND
+        </h1>
+        </HeroContainer>
+        <main class="pb-24">
+            <section
+                class="w-full max-w-[1400px] mx-auto my-24 gap-10 text-pretty px-6 text-left text-xl sm:px-20 flex flex-col md:flex-row items-center justify-between p-6 md:p-8"
+            >
+                <div id="theater-text" class="md:w-1/2 space-y-4">
+                <h1
+                    class="mx-auto mb-10 text-balance text-left text-3xl lg:text-5xl font-semibold tracking-wide"
+                >
+                    Un reconocimiento único para creadores, creadoras y comunidades que buscan su lugar en el mundo del entretenimiento en directo.
+                </h1>
+                <p>Los Premios ESLAND son una iniciativa privada promovida por el célebre streamer TheGrefg y buscan apoyar y reconocer la creación de contenido en el ámbito hispanohablante.</p>
+                <p>ESLAND es el acrónimo de ESPAÑA, LATINOAMÉRICA Y ANDORRA, tres localizaciones geográficas que comparten el idioma que las une más allá de cualquier frontera, ya sea física o virtual.</p>
+                </div>
+                <div id="theater" class="mt-6 md:mt-0 md:w-1/2">
+                <img
+                    class="object-cover w-full h-full rounded-md"
+                    height={500}
+                    src="/salon.png"
+                    style={{
+                    aspectRatio: "812/556",
+                    objectFit: "cover",
+                    }}
+                    width={500}
+                />
+                </div>
+            </section>
+    
+            <section
+                class="w-full max-w-[1400px] mx-auto my-24 gap-10 text-pretty px-6 text-left text-xl sm:px-20 flex flex-col md:flex-row items-center justify-between p-6 md:p-8"
+            >
+                <div id="trophies" class="mt-6 md:mt-0 md:w-1/2">
+                <img
+                    class="object-cover w-full h-full rounded-md"
+                    height={556}
+                    src="/trofeos.png"
+                    style={{
+                    aspectRatio: "812/556",
+                    objectFit: "cover",
+                    }}
+                    width={812}
+                />
+                </div>
+                <div id="trophies-text" class="md:w-1/2 space-y-4">
+                <h1
+                    class="mx-auto mb-10 text-balance text-left text-3xl lg:text-5xl font-semibold tracking-wide"
+                >
+                EL PREMIO A LA CREACIÓN
+                </h1>
+                <p>El trofeo que se entrega a los ganadores y ganadoras en la ceremonia es una representación de la letra “A” dividida en tres fragmentos y ensambladas a modo de artilugio futurista sobre el que se construye la narrativa del evento.</p>
+                <p>Un artefacto de origen desconocido que dota de herramientas y habilidades para la creación. Una metáfora sobre la emancipación del talento gracias a la tecnología y la irrupción de los creadores de contenido en el mundo del entretenimiento.</p>
+                </div>
+            </section>
+            <InfoKitPrensa/>
+        </main>
+</Layout>
+
+<style>
+        #theater,
+        #trophies-text h1,
+        #trophies-text p {
+        animation: cover-animation linear both;
+        animation-timeline: view();
+        }
+        #theater-text h1,
+        #theater-text p,
+        #trophies {
+        animation: entry-animation linear both;
+        animation-timeline: view();
+        }
+        #theater {
+        animation-range: entry 10% cover 40%;
+        }
+        #theater-text h1 {
+        animation-range: entry 10% cover 30%;
+        }
+        #theater-text p {
+        animation-range: entry 10% cover 20%;
+        }
+        #trophies {
+        animation-range: entry 30% cover 50%;
+        }
+        #trophies-text h1 {
+        animation-range: entry 30% cover 40%;
+        }
+        #trophies-text p {
+        animation-range: entry 20% cover 30%;
+        }
+        @keyframes entry-animation {
+        0% {
+            opacity: 0;
+            translate: var(--entry-animation) 0;
+        }
+        100% {
+            opacity: 1;
+            translate: 0 0;
+        }
+        }
+        @keyframes cover-animation {
+        0% {
+            opacity: 0;
+            translate: var(--cover-animation) 0;
+        }
+        100% {
+            opacity: 1;
+            translate: 0 0;
+        }
+        }
+  </style>

@@ -1,0 +1,108 @@
+---
+import 'photoswipe/style.css';
+---
+
+<div class="grid grid-cols-3 max-w-6xl gap-8 mx-auto py-20" id="gallery">
+
+    <a href="imagen1.jpg"
+    class="group rounded-x transition-all hover:scale-105 relative" 
+    data-pswp-width="1152" 
+    data-pswp-height="767"  
+    target="_blank"
+    >
+        <img class="blur-lg  absolute inset-0 transition group-hover:contrast-100 opacity-70 -z-10" loading="lazy" src="/imagen1.jpg" alt="">
+        <img class="rounded-xl" loading="lazy" src="/imagen1.1.jpg" alt="">
+    </a>
+
+    <a href="imagen2.jpg" 
+    class="group rounded-x transition-all hover:scale-105 relative"
+    data-pswp-width="1152" 
+    data-pswp-height="767"   
+    target="_blank"
+    >   
+        <img class="blur-lg  absolute inset-0 transition group-hover:contrast-100 opacity-70 -z-10" loading="lazy" src="/imagen2.jpg" alt="">
+        <img class="rounded-xl" loading="lazy" src="/imagen2.1.jpg" alt="">
+    </a>
+
+    <a href="imagen3.jpg" 
+    class="group rounded-x transition-all hover:scale-105 relative"  
+    data-pswp-width="1152" 
+    data-pswp-height="767"  
+    target="_blank"
+    >
+        <img class="blur-lg  absolute inset-0 transition group-hover:contrast-100 opacity-70 -z-10" loading="lazy" src="/imagen3.jpg" alt=""> 
+        <img class="rounded-xl" loading="lazy" src="/imagen3.1.jpg" alt="">
+    </a>
+
+    <a href="imagen4.jpg" 
+    class="group rounded-x transition-all hover:scale-105 relative" 
+    data-pswp-width="767" 
+    data-pswp-height="1152"   
+    target="_blank"
+    >
+        <img class="blur-lg  absolute inset-0 transition group-hover:contrast-100 opacity-70 -z-10" loading="lazy" src="/imagen4.jpg" alt="">
+        <img class="rounded-xl" loading="lazy" src="/imagen4.1.jpg" alt="">
+    </a>
+
+    <a href="imagen5.jpg" 
+    class="group rounded-x transition-all hover:scale-105 relative"
+    data-pswp-width="1152" 
+    data-pswp-height="767"    
+    target="_blank"
+    >   
+        <img class="blur-lg  absolute inset-0 transition group-hover:contrast-100 opacity-70 -z-10" loading="lazy" src="/imagen5.jpg" alt="">
+        <img class="rounded-xl" loading="lazy" src="/imagen5.1.jpg" alt="">
+    </a>
+
+    <a href="imagen6.jpg" 
+    class="group rounded-x transition-all hover:scale-105 relative" 
+    data-pswp-width="1152" 
+    data-pswp-height="767"   
+    target="_blank"
+    >   
+        <img class="blur-lg absolute inset-0 transition group-hover:contrast-100 opacity-70 -z-10" loading="lazy" src="/imagen6.jpg" alt="">
+        <img class="rounded-xl" loading="lazy" src="/imagen6.1.jpg" alt="">
+    </a>
+
+    <a href="imagen7.jpg" 
+    class="group rounded-x transition-all hover:scale-105 relative"  
+    data-pswp-width="767" 
+    data-pswp-height="1152"  
+    target="_blank"
+    >   
+        <img class="blur-lg absolute inset-0 transition group-hover:contrast-100 opacity-70 -z-10" loading="lazy" src="/imagen7.jpg" alt="">
+        <img class="rounded-xl" loading="lazy" src="/imagen7.1.jpg" alt="">
+    </a>
+
+    <a href="imagen8.jpg" 
+    class="group rounded-x transition-all hover:scale-105 relative"  
+    data-pswp-width="1152" 
+    data-pswp-height="767"  
+    target="_blank"
+    >   
+        <img class="blur-lg absolute inset-0 transition group-hover:contrast-100 opacity-70 -z-10" loading="lazy" src="/imagen8.jpg" alt="">
+        <img class="rounded-xl" loading="lazy" src="/imagen8.1.jpg" alt="">
+    </a>
+
+    <a href="imagen9.jpg" 
+    class="group rounded-x transition-all hover:scale-105 relative"  
+    data-pswp-width="1152" 
+    data-pswp-height="767"  
+    target="_blank"
+    >   
+        <img class="blur-lg absolute inset-0 transition group-hover:contrast-100 opacity-70 -z-10" loading="lazy" src="/imagen9.jpg" alt="">
+        <img class="rounded-xl" loading="lazy" src="/imagen9.1.jpg" alt="">
+    </a>
+</div>
+
+<script>
+    import PhotoSwipeLightbox from 'photoswipe/lightbox';
+    
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '#gallery',
+        children: 'a',
+        showHideAnimationType:"fade",
+        pswpModule: () => import('photoswipe')
+    });
+    lightbox.init();
+    </script>
