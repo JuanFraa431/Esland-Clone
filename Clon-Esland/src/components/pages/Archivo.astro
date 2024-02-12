@@ -5,12 +5,13 @@ import Button from '../button.tsx';
 import Numeros from '../Numeros.astro'
 import Galeria from '../Galeria.astro'
 import Ediciones from '../Ediciones.astro'
+import Footer from '../Footer.astro';
 ---
 <Layout title="Archivo" 
 description="Archivo">
 
 
-    <HeroContainer img="/hero.png">
+    <HeroContainer img="/hero.png" clip_path='none' >
         <h1 class="text-5xl font-medium mb-20 tracking-wider">EDICIONES ANTERIORES</h1>
 
         <Button
@@ -21,16 +22,17 @@ description="Archivo">
         </Button>
     </HeroContainer>
     <main>
+        <Ediciones/>
         <h1 class="text-4xl font-semibold text-center text-wrap mx-auto mt-20 tracking-wide animate-on-scroll titulo-galeria ">
             GALERIA
         </h1>
-        <Ediciones/>
         <Galeria/>
         <Numeros/>
     </main>
 
 
 </Layout>
+<Footer/>
 
 <style>
     .titulo-galeria{

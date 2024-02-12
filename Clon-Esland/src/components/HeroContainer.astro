@@ -1,14 +1,16 @@
 ---
 interface Props {
     img:string
+    clip_path:string
 }
 
 const { img } = Astro.props
+const { clip_path } = Astro.props
 ---
 
 
 <div
-style={` background-image: url("${img}"); clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0% 85%);` }
+style={` background-image: url("${img}"); clip-path:${clip_path}` }
 class="bg-no-repeat bg-cover cp-v relative h-[90vh] w-full max-w-[100vw]"
 >
     <div class="absolute inset-0 m-auto w-full h-full flex justify-center flex-col items-center">

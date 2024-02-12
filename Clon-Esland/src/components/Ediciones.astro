@@ -1,38 +1,49 @@
-    <div class="flex justify-center space-x-4">
-        <!-- Botones -->
-        <button id="btnIframe1" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Primera Edición
-        </button>
-        <button id="btnIframe2" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Segunda Edición
-        </button>
-    </div>
-    
-    <!-- Contenedor de iframes -->
-    <div id="iframeContainer" class="mt-8">
-        <div id="iframe1" class="iframe-container">
-        <iframe width="1456" height="553" src="https://www.youtube.com/embed/9VHqKbR9LgM" title="PREMIOS ESLAND EN MÉXICO - TheGrefg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div id="iframe2" class="iframe-container" style="display: none;">
-        <iframe width="1456" height="553" src="https://www.youtube.com/embed/aL8kcA3ZDOs" title="Anuncio Oficial Premios Esland" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <!-- Script JavaScript -->
     <script>
-        // Función para mostrar el iframe1 y ocultar iframe2
-        function mostrarIframe1() {
-        document.getElementById("iframe1").style.display = "block";
-        document.getElementById("iframe2").style.display = "none";
-        }
+        document.addEventListener("DOMContentLoaded", function() {
+            // Función para mostrar el iframe1 y ocultar iframe2
+            function mostrarIframe1() {
+                document.getElementById("iframe1").style.display = "block";
+                document.getElementById("iframe2").style.display = "none";
+            }
 
-        // Función para mostrar el iframe2 y ocultar iframe1
-        function mostrarIframe2() {
-        document.getElementById("iframe1").style.display = "none";
-        document.getElementById("iframe2").style.display = "block";
-        }
+            // Función para mostrar el iframe2 y ocultar iframe1
+            function mostrarIframe2() {
+                document.getElementById("iframe1").style.display = "none";
+                document.getElementById("iframe2").style.display = "block";
+            }
 
-        // Asociar eventos de clic a los botones
-        document.getElementById("btnIframe1").addEventListener("click", mostrarIframe1);
-        document.getElementById("btnIframe2").addEventListener("click", mostrarIframe2);
+            // Asociar eventos de clic a los botones
+            document.getElementById("btnIframe1").addEventListener("click", mostrarIframe1);
+            document.getElementById("btnIframe2").addEventListener("click", mostrarIframe2);
+
+            // Llamar a la función para mostrar el iframe1 por defecto
+            mostrarIframe1();
+        });
     </script>
+
+
+    <div class="flex justify-center space-x-0">
+        <!-- Botones -->
+        <button id="btnIframe1" class="flex-1 uppercase bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-800 text-white font-bold py-6 px-4 rounded-l focus:outline-none focus:shadow-outline">
+            Primera Edición
+        </button>
+        <button id="btnIframe2" class="flex-1 uppercase bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-800 text-white font-bold py-6 px-4 rounded-r focus:outline-none focus:shadow-outline">
+            Segunda Edición
+        </button>
+    </div>
+
+    <div class="flex justify-center items-center h-screen">
+        <div id="iframeContainer" class="max-w-screen-xl">
+            <div id="iframe1" class="iframe-container">
+                <iframe height="600" width="1150" src="https://www.youtube.com/embed/9VHqKbR9LgM" title="PREMIOS ESLAND EN MÉXICO - TheGrefg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div id="iframe2" class="iframe-container" style="display: none;">
+                <iframe width="1150" height="600" src="https://www.youtube.com/embed/aL8kcA3ZDOs" title="Anuncio Oficial Premios Esland" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+    
